@@ -1,6 +1,3 @@
-# shut-the-dux-up
-UX isn't just designed-it's declared
-
 # Declarative UX
 
 **Declarative UX** is an open-source framework for generating, testing, and delivering user experiences using declarative specifications, AI collaboration, and behavior-driven development (BDD).
