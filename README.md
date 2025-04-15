@@ -1,5 +1,12 @@
 # Declarative UX
 
+### 🦆 Haters Gonna Quack
+Declarative UX is built to leap over the objections.
+
+When others say UX is too slow, not credible, or hard to test—we don’t argue. We execute.
+From research to validated prototype in under three weeks.
+Let the DUX quack. We ship at the speed of modern software.
+
 **Declarative UX** is an open-source framework for generating, testing, and delivering user experiences using declarative specifications, AI collaboration, and behavior-driven development (BDD).
 
 > _From protocol to prototype, Declarative UX transforms UX design into an executable, testable, and scalable system._
@@ -41,6 +48,12 @@ Declarative UX helps teams:
 - Avoid wasted engineering cycles assessing feasibility or grooming early-stage UX concepts
 - Provide PMs with rapid usability-tested outputs that reduce uncertainty and accelerate roadmap clarity
 
+## 🧪 Example Project
+
+Want to see Declarative UX in action?
+
+Check out [CHunkee](https://github.com/nicholasjayantylearns/chunkee) — a sample project that applies Declarative UX principles to chunking structured qualitative data and generating graph-ready design models. It's a live demonstration of using LLMs + BDD to go from research protocols to testable, code-ready UX components.
+
 ## 🔧 Example Workflow
 1. Write a UX research protocol or usability scenario
 2. Use LLM (e.g., via CLI or API) to convert the scenario into Gherkin syntax
@@ -61,8 +74,9 @@ We’re in early development. Contributions welcome!
 - File Issues to report bugs or share use cases
 - Submit PRs to help us build the future of executable UX
 
+
 ## 📜 License
-MIT
+GNU General Public License (GPL)
 
 ## ✨ Shout-out
 Inspired by the elegant split between imperative and declarative logic in engineering—and brought to life through AI + open source. Special thanks to Marty Jackson (@mjhacks), who once said so kindly: *"The software is the table."* Also inspired by Robert Fabricant’s article in Fast Company, [The Big Design Freak-Out](https://www.fastcompany.com/91027996/the-big-design-freak-out-a-generation-of-design-leaders-grapple-with-their-future).
