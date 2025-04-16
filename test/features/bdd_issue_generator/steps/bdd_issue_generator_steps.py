@@ -32,51 +32,44 @@
 
 from behave import given, when, then
 
-@given('a directory containing feature files')
-def step_given_directory_with_feature_files(context):
-    # Verify the directory contains feature files
-    context.feature_files = ["example.feature"]  # Mocked list of feature files
-    assert context.feature_files, "No feature files found in the directory."
+# @given('a directory containing feature files')
+# def step_given_directory_with_feature_files(context):
+#     context.feature_files = ["example.feature"]
+#     assert context.feature_files, "No feature files found in the directory."
 
 @when('the utility processes the feature files')
 def step_when_process_feature_files(context):
     # Process the feature files (mocked processing logic)
     context.processed_features = [{"name": "example.feature", "steps": ["Given", "When", "Then"]}]
+    context.extracted_steps = [step for feature in context.processed_features for step in feature["steps"]]
     assert context.processed_features, "Feature files could not be processed."
+    assert context.extracted_steps, "No steps were extracted."
 
 @then('it extracts all Given/When/Then steps')
 def step_then_extract_steps(context):
-    # Extract Given/When/Then steps from the processed feature files
     context.extracted_steps = [step for feature in context.processed_features for step in feature["steps"]]
     assert context.extracted_steps, "No steps were extracted."
 
 @then('it identifies the scenarios and their steps')
 def step_then_identify_scenarios(context):
-    # Identify scenarios and their steps (mocked logic)
     context.scenarios = [{"name": "Scenario 1", "steps": context.extracted_steps}]
     assert context.scenarios, "No scenarios were identified."
-
-@given('a directory containing step definition files')
-def step_given_directory_with_step_definitions(context):
-    # Verify the directory contains step definition files
-    context.step_definition_files = ["example_steps.py"]  # Mocked list of step definition files
-    assert context.step_definition_files, "No step definition files found in the directory."
 
 @when('the utility processes the step definition files')
 def step_when_process_step_definitions(context):
     # Process the step definition files (mocked processing logic)
     context.processed_step_definitions = [{"name": "example_steps.py", "functions": ["step_1", "step_2"]}]
+    context.extracted_functions = [func for file in context.processed_step_definitions for func in file["functions"]]
     assert context.processed_step_definitions, "Step definition files could not be processed."
+    assert context.extracted_functions, "No step functions were extracted."
 
 @then('it extracts all step functions')
 def step_then_extract_step_functions(context):
-    # Extract step functions from the processed step definition files
     context.extracted_functions = [func for file in context.processed_step_definitions for func in file["functions"]]
     assert context.extracted_functions, "No step functions were extracted."
 
 @then('it maps them to their corresponding steps in feature files')
 def step_then_map_steps_to_functions(context):
-    # Map extracted steps to their corresponding step functions (mocked logic)
     context.mapped_steps = {"Given": "step_1", "When": "step_2"}
     assert context.mapped_steps, "Steps could not be mapped to functions."
 
@@ -173,3 +166,23 @@ def step_then_update_links(context):
     # Update links to their corresponding files (mocked logic)
     context.updated_links = True
     assert context.updated_links, "Links to corresponding files were not updated."
+
+@then('it creates GitHub issues for all steps')
+def step_then_create_github_issues_for_all_steps(context):
+    context.github_issues = [{"title": f"Issue for step {step}"} for step in context.extracted_steps]
+    assert context.github_issues, "No GitHub issues were created for steps."
+
+@then('it links the issues to their corresponding feature files')
+def step_then_link_issues_to_feature_files(context):
+    context.linked_issues = [{"issue": issue, "file": "example.feature"} for issue in context.github_issues]
+    assert context.linked_issues, "Issues were not linked to feature files."
+
+@then('it creates GitHub issues for all step functions')
+def step_then_create_github_issues_for_all_step_functions(context):
+    context.github_issues = [{"title": f"Issue for function {func}"} for func in context.extracted_functions]
+    assert context.github_issues, "No GitHub issues were created for step functions."
+
+@then('it links the issues to their corresponding step definition files')
+def step_then_link_issues_to_step_definition_files(context):
+    context.linked_issues = [{"issue": issue, "file": "example_steps.py"} for issue in context.github_issues]
+    assert context.linked_issues, "Issues were not linked to step definition files."

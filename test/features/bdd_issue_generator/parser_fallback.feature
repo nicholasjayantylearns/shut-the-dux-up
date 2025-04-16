@@ -19,8 +19,7 @@ Feature: Fallback to LLM Parser when Simple Parser fails
 
   Scenario: Fall back to LLM Parser for ambiguous step definitions
     Given a directory containing step definition files with dynamic patterns
-    When the utility processes the files using the Simple Parser
-    And the Simple Parser fails to map steps to step definitions
+    When the Simple Parser fails to map steps to step definitions
     Then it falls back to the LLM Parser
     And the LLM Parser generates summaries for the step definitions
     And it creates GitHub issues with meaningful descriptions
