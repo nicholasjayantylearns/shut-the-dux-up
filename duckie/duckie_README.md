@@ -48,8 +48,7 @@ duckie check
 
 duckie test
 # Your UX... now executable
-``
-
+```
 ## 🚀 Core Commands
 
 | Command | Description |
