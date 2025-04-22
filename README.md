@@ -31,10 +31,23 @@ UX should be:
 - **System-integrated** – A first-class input into engineering, sales, and support decision-making
 
 ## 🧩 Strategic Outcome (Josh Seiden Framework)
-- **Who:** UX Designers  
-- **Has to do what:** Use Declarative UX to turn research into working, usability-tested code  
-- **By how much:** Within a **3-week sprint** from research to validation  
-- **So that:** Senior product managers can confidently drop or advance product directions before roadmap and engineering investment
+🧠 Outcome-Driven Vision
+
+Declarative UX is designed to empower teams to make smarter product decisions faster—reducing risk, improving clarity, and accelerating time to value.
+
+#### OKR Framework (c/o Josh Seiden)
+
+**Who:** UX Designers  
+**Has to do what:** Use Declarative UX to turn research into working, usability-tested code  
+**By how much:** Within a 3-week sprint from research to validation  
+**So that:** Senior product managers can confidently drop or advance product directions before roadmap and engineering investment
+
+#### Strategic Behaviors Enabled (Product Manager Focus)
+
+| **Who** | **Has to do what** | **By how much** |
+|--------|---------------------|-----------------|
+| A Product Manager | **Ship the highest-value feature set** | In under 2 months, using demand signals, business value, and differentiation data to identify, test, and deliver the top-performing experience |
+| A Product Manager | **Avoid shipping low-value features** | In under 2 months, by identifying and divesting in underperforming feature candidates—freeing up design, engineering, and AI capacity to focus on what matters most |
 
 ## 🔍 Use Cases
 - Reduce UX’s dependency on product engineering to test new ideas at scale—with speed and statistical rigor
