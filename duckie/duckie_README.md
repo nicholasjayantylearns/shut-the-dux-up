@@ -2,8 +2,14 @@
 
 > _Teach me how to Duckie. Everybody DUX-y._
 
-Duckie is the command-line cockpit for Declarative UX — where designers write like screenwriters and ship like engineers.
+**Duckie** started as a duxworx utility designed to automate the creation of GitHub issues from feature files and step definitions. It supports two approaches for parsing and processing files: **Simple Parsing** and **LLM-Enabled Parsing**.
 
+### Key Features:
+- Parse feature files written in Gherkin syntax to extract steps and scenarios.
+- Parse step definition files to extract function names and patterns.
+- Automatically create GitHub issues for missing step implementations and step definition functions.
+- Use an LLM to enhance parsing, generate meaningful issue descriptions, and group related tasks intelligently.
+- Monitor updates to feature files or step definitions and create issues for new or modified steps.
 ---
 
 ## 🧠 Vision
@@ -34,16 +40,7 @@ duckie test
 
 ---
 
-## Duckie - Utility Project
 
-**Duckie** a duxworx utility designed to automate the creation of GitHub issues from feature files and step definitions. It supports two approaches for parsing and processing files: **Simple Parsing** and **LLM-Enabled Parsing**.
-
-### Key Features:
-- Parse feature files written in Gherkin syntax to extract steps and scenarios.
-- Parse step definition files to extract function names and patterns.
-- Automatically create GitHub issues for missing step implementations and step definition functions.
-- Use an LLM to enhance parsing, generate meaningful issue descriptions, and group related tasks intelligently.
-- Monitor updates to feature files or step definitions and create issues for new or modified steps.
 
 ---
 
@@ -57,6 +54,10 @@ duckie test
 | **Grouping Steps**        | Groups steps based on predefined rules (e.g., steps in the same scenario).          | Uses an LLM to infer relationships between steps and group them into meaningful tasks.  |
 | **Error Handling**        | Logs errors for malformed files and skips processing.                               | Uses an LLM to attempt recovery and extract meaningful data from malformed files.       |
 ## 🚀 Core Commands
+
+##Where we are heading
+
+Duckie is the command-line cockpit for Declarative UX — where designers write like screenwriters and ship like engineers.
 
 | Command | Description |
 |--------|-------------|
