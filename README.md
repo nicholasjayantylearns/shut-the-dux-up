@@ -31,15 +31,12 @@ UX should be:
 - **System-integrated** – A first-class input into engineering, sales, and support decision-making
 
 ## 🧩 Strategic Outcome (Josh Seiden Framework)
-🧠 Outcome-Driven Vision
 
-Declarative UX is designed to empower teams to make smarter product decisions faster—reducing risk, improving clarity, and accelerating time to value.
-
-#### OKR Framework (c/o Josh Seiden)
+🧠 Outcome-Driven Objective
 
 Declarative UX supports high-impact behaviors across UX and Product Management by defining measurable outcomes that guide execution and investment decisions.
 
-#### Strategic Behaviors Enabled
+#### Key Results
 
 | **Who** | **Has to do what** | **By how much** |
 |--------|---------------------|-----------------|
