@@ -27,7 +27,7 @@
 > As a designer, I want to describe the user experience without my hands leaving the keyboard.  
 > I want to write it like a movie — and have the rest follow.
 
-##Where we are heading
+## Where we are heading
 Duckie is the command-line cockpit for Declarative UX — where designers write like screenwriters and ship like engineers. Duckie generates structured UX artifacts that trigger pipelines, tests, and issues as you declare behavior.  
 
 You define the outcome. Duckie choreographs the rest. 
