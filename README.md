@@ -3,7 +3,7 @@
 ### 🦆 Haters Gonna Quack
 Declarative UX is built to leap over the objections.
 
-When others say UX is too slow, not credible, or hard to test—we don’t argue. We execute.
+When UXers say 'but our process requires X,Y,Z and it will take A,B,C weeks to ....' When crossfunctional partners say UX is too slow, not credible, or it is hard to test—we don’t argue. We execute.
 From research to validated prototype in under three weeks.
 Let the DUX quack. We ship at the speed of modern software.
 
