@@ -12,13 +12,25 @@
 - Monitor updates to feature files or step definitions and create issues for new or modified steps.
 ---
 
+### Key Differences Between Simple Parsing and LLM-Enabled Parsing
+
+| **Aspect**                | **Simple Parsing**                                                                 | **LLM-Enabled Parsing**                                                                 |
+|---------------------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| **Feature File Parsing**  | Uses Gherkin parsers to extract structured data (e.g., steps, scenarios).           | Uses an LLM to interpret ambiguous or malformed feature files.                         |
+| **Step Definition Parsing** | Uses regex or AST parsing to extract function names and patterns.                  | Uses an LLM to summarize the purpose of each step definition.                          |
+| **Issue Descriptions**    | Relies on predefined templates for issue descriptions.                              | Uses an LLM to generate detailed, human-readable descriptions for issues.              |
+| **Grouping Steps**        | Groups steps based on predefined rules (e.g., steps in the same scenario).          | Uses an LLM to infer relationships between steps and group them into meaningful tasks.  |
+| **Error Handling**        | Logs errors for malformed files and skips processing.                               | Uses an LLM to attempt recovery and extract meaningful data from malformed files.       |
+
 ## 🧠 Vision
 
 > As a designer, I want to describe the user experience without my hands leaving the keyboard.  
 > I want to write it like a movie — and have the rest follow.
 
-Duckie generates structured UX artifacts that trigger pipelines, tests, and issues as you declare behavior.  
-You define the outcome. Duckie choreographs the rest.
+##Where we are heading
+Duckie is the command-line cockpit for Declarative UX — where designers write like screenwriters and ship like engineers. Duckie generates structured UX artifacts that trigger pipelines, tests, and issues as you declare behavior.  
+
+You define the outcome. Duckie choreographs the rest. 
 
 ---
 
@@ -36,28 +48,9 @@ duckie check
 
 duckie test
 # Your UX... now executable
-```
+``
 
----
-
-
-
----
-
-### Key Differences Between Simple Parsing and LLM-Enabled Parsing
-
-| **Aspect**                | **Simple Parsing**                                                                 | **LLM-Enabled Parsing**                                                                 |
-|---------------------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| **Feature File Parsing**  | Uses Gherkin parsers to extract structured data (e.g., steps, scenarios).           | Uses an LLM to interpret ambiguous or malformed feature files.                         |
-| **Step Definition Parsing** | Uses regex or AST parsing to extract function names and patterns.                  | Uses an LLM to summarize the purpose of each step definition.                          |
-| **Issue Descriptions**    | Relies on predefined templates for issue descriptions.                              | Uses an LLM to generate detailed, human-readable descriptions for issues.              |
-| **Grouping Steps**        | Groups steps based on predefined rules (e.g., steps in the same scenario).          | Uses an LLM to infer relationships between steps and group them into meaningful tasks.  |
-| **Error Handling**        | Logs errors for malformed files and skips processing.                               | Uses an LLM to attempt recovery and extract meaningful data from malformed files.       |
 ## 🚀 Core Commands
-
-##Where we are heading
-
-Duckie is the command-line cockpit for Declarative UX — where designers write like screenwriters and ship like engineers.
 
 | Command | Description |
 |--------|-------------|
