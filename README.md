@@ -44,6 +44,23 @@ Declarative UX supports high-impact behaviors across UX and Product Management b
 | A Product Manager | Ship the highest-value feature set | In under 2 months, using demand signals, business value, and differentiation data to identify, test, and deliver the top-performing experience |
 | A Product Manager | Avoid shipping low-value features | In under 2 months, by identifying and divesting in underperforming feature candidates—freeing up design, engineering, and AI capacity to focus on what matters most |
 
+## 🦆 The DUX Stack
+
+Declarative UX is powered by a modular, open-source stack that enables rapid, testable experience development across research, design, and engineering.
+
+![duxstack_withcontent](https://github.com/user-attachments/assets/f83d591b-8075-4d2b-8c12-9056c8843443)
+
+| **Component** | **Purpose** |
+|---------------|-------------|
+| **Chunkee** | Semantic chunking and domain model detection from unstructured data (e.g., transcripts, PDFs) |
+| **Evergreen** | Graph-based qualitative feature store for versioning design models and structuring insight |
+| **Duckie** | Declarative UX CLI that generates Gherkin specs, BDD Step Definitions, and GitHub issues |
+| **Artee** | Automation + analytics trigger engine for test execution, preview deploys, and PRs |
+| **NOPE** | Validation and decision logic engine that connects analytics platforms (Amplitude, Mixpanel) and unmoderated UX testing tools (UserZoom, Pendo) to promote or suppress variants |
+| **Fidelity Runners** | Low → high-fidelity test environments: from Streamlit scripts to Carbon Design System prototypes |
+| **Duckie Stack (BYOD/M)** | Optional layer for privacy-preserving federated data + model sharing between organizations |
+
+Each module is independently usable, interoperable, and optimized for "bring your own data" (BYOD) and "bring your own model" (BYOM) workflows—making DUX extensible across teams, tools, and org boundaries.
 
 ## 🔍 Use Cases
 - Reduce UX’s dependency on product engineering to test new ideas at scale—with speed and statistical rigor
