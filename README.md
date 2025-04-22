@@ -37,17 +37,16 @@ Declarative UX is designed to empower teams to make smarter product decisions fa
 
 #### OKR Framework (c/o Josh Seiden)
 
-**Who:** UX Designers  
-**Has to do what:** Use Declarative UX to turn research into working, usability-tested code  
-**By how much:** Within a 3-week sprint from research to validation  
-**So that:** Senior product managers can confidently drop or advance product directions before roadmap and engineering investment
+Declarative UX supports high-impact behaviors across UX and Product Management by defining measurable outcomes that guide execution and investment decisions.
 
-#### Strategic Behaviors Enabled (Product Manager Focus)
+#### Strategic Behaviors Enabled
 
 | **Who** | **Has to do what** | **By how much** |
 |--------|---------------------|-----------------|
-| A Product Manager | **Ship the highest-value feature set** | In under 2 months, using demand signals, business value, and differentiation data to identify, test, and deliver the top-performing experience |
-| A Product Manager | **Avoid shipping low-value features** | In under 2 months, by identifying and divesting in underperforming feature candidates—freeing up design, engineering, and AI capacity to focus on what matters most |
+| A UX Designer | Turn research into working, usability-tested code | Within a 3-week sprint from research to validation—so senior PMs can confidently drop or advance product directions |
+| A Product Manager | Ship the highest-value feature set | In under 2 months, using demand signals, business value, and differentiation data to identify, test, and deliver the top-performing experience |
+| A Product Manager | Avoid shipping low-value features | In under 2 months, by identifying and divesting in underperforming feature candidates—freeing up design, engineering, and AI capacity to focus on what matters most |
+
 
 ## 🔍 Use Cases
 - Reduce UX’s dependency on product engineering to test new ideas at scale—with speed and statistical rigor
