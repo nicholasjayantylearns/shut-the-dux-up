@@ -50,7 +50,7 @@ Declarative UX helps teams:
 
 ---
 
-## 🔧 Follow Me - Utility Project
+## Duckie - Utility Project
 
 **Follow Me** is a utility project designed to automate the creation of GitHub issues from feature files and step definitions. It supports two approaches for parsing and processing files: **Simple Parsing** and **LLM-Enabled Parsing**.
 
