@@ -1,0 +1,9 @@
+Idea,Alignment to Key Results,Ease of Implementation,Status
+Auto-groom UX input into 3-hour story issues,"Contributor adoption, agile transformation",Medium,Not yet implemented
+Add success story template auto-generation after test pass,"UX impact validation, stakeholder reporting",Medium,Not yet implemented
+Support BYOM (Bring Your Own Model) in Duckie,"Open-source collaboration, model integration",Hard,Not yet implemented
+Support user-defined object model (e.g. Inverse Conway),"Architecture mapping, delivery alignment",Hard,"Partially discussed, not implemented"
+Expose mock NOPE test evaluation API schema,"Automated UX validation, API ecosystem",Medium,Not implemented
+Handle fallback if git config for PR target is missing,"Contributor experience, reliability",Easy,Not implemented
+CLI toggle for current vs future state pipeline selection,"Clarity of UX intent, test vs build separation",Medium,"Declared in .feature, needs implementation"
+Confidence-driven 'commit or kill' thresholds via NOPE,"PM prioritization, test-to-investment strategy",Hard,"Framed, not implemented"
