@@ -12,7 +12,7 @@ Duckie started as a duxworx utility designed to automate the creation of GitHub 
 
 ### 🧠 Who It's For
 
-**Anyone with a product vision that needs to engage contributors by effectively translating their vision into tactical, testable chunks of work that can be triaged, prioritized and delivered by a community or team.**
+**For anyone with a big product idea who needs to turn that vision into bite-sized, testable tasks a team can actually jump in on, sort out, and ship.**
 
 ---
 
