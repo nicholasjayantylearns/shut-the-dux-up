@@ -12,10 +12,7 @@ Duckie started as a duxworx utility designed to automate the creation of GitHub 
 
 ### 🧠 Who It's For
 
-*   **Product Managers** who need to prioritize the next best bet from a flood of RFEs
-*   **UX Designers / Technologists** who want to deliver testable behavior, not just wireframes
-*   **Engineers** who need sprint-ready inputs scoped to user outcomes
-*   **AI/ML platform teams** who need to validate technical features through real usage
+*   **Anyone with a product vision that needs to engage contributors by effectively translating their vision into tactical, testable chunks of work that can be triaged, prioritized and delivered by a community or team. 
 
 ---
 
