@@ -1,0 +1,9 @@
+[submodule "dux-object-model-core"]
+	path = dux-object-model-core
+	url = https://github.com/nicholasjayantylearns/shut-the-dux-up.git
+[submodule "dux-research-platform"]
+	path = dux-research-platform
+	url = https://github.com/nicholasjayantylearns/shut-the-dux-up.git
+[submodule "dux-white-label-ui"]
+	path = dux-white-label-ui
+	url = https://github.com/nicholasjayantylearns/shut-the-dux-up.git
