@@ -1,7 +1,49 @@
 {
     "folders": [
         {
+            "name": "🔄 DUX Research Ecosystem (Root)",
             "path": "."
+        },
+        {
+            "name": "🧠 DUX Object Model Core",
+            "path": "./dux-object-model-core"
+        },
+        {
+            "name": "🔬 DUX Research Platform",
+            "path": "./dux-research-platform"
+        },
+        {
+            "name": "🎨 DUX White Label UI",
+            "path": "./dux-white-label-ui"
+        },
+        {
+            "name": "⚙️ DUX ETL Platform",
+            "path": "./dux-etl-platform"
+        },
+        {
+            "name": "🧪 Test Suite",
+            "path": "./test"
         }
-    ]
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/.DS_Store": true,
+            "**/node_modules": true,
+            "**/__pycache__": true,
+            "**/.pytest_cache": true,
+            "**/venv": true,
+            "**/.next": true,
+            "**/9999_archive": true,
+            "**/duckie": true
+        },
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/__pycache__": true,
+            "**/.pytest_cache": true,
+            "**/venv": true,
+            "**/.next": true,
+            "**/9999_archive": true,
+            "**/duckie": true
+        }
+    }
 }
