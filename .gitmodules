@@ -1,3 +1,9 @@
 [submodule "dux-object-model-core"]
 	path = dux-object-model-core
 	url = file:///Users/njayanty/Projects/Upstream Contributions/shut_the_dux_up/dux-object-model-core
+[submodule "dux-research-platform"]
+	path = dux-research-platform
+	url = file:///Users/njayanty/Projects/Upstream Contributions/shut_the_dux_up/dux-research-platform
+[submodule "dux-white-label-ui"]
+	path = dux-white-label-ui
+	url = file:///Users/njayanty/Projects/Upstream Contributions/shut_the_dux_up/dux-white-label-ui

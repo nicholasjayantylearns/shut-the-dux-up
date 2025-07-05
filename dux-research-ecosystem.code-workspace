@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "name": "DUX Object Model (Core)",
+      "path": "./dux-object-model-v9.4_split"
+    },
+    {
+      "name": "DUX ETL Platform",
+      "path": "./dux-etl-platform"
+    },
+    {
+      "name": "DUX White-Label UI",
+      "path": "./dux-white-label-ui"
+    },
+    {
+      "name": "DUX Research Platform",
+      "path": "./dux-research-platform"
+    }
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.suggest.autoImports": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode",
+      "ms-vscode.vscode-typescript-next",
+      "ms-vscode.vscode-json"
+    ]
+  }
+} 
