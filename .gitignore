@@ -172,5 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-9999_archive/
-duckie/
+
+.DS_Store
+dux-design-system-showcase/.DS_Store.DS_Store
+**/.DS_Store
+.DS_Store
