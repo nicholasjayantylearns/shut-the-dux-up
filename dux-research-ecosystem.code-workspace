@@ -2,7 +2,7 @@
   "folders": [
     {
       "name": "DUX Object Model (Core)",
-      "path": "./dux-object-model-v9.4_split"
+      "path": "./dux-object-model-core"
     },
     {
       "name": "DUX ETL Platform",
