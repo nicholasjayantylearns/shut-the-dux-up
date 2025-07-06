@@ -1,0 +1,5 @@
+Prompt: How do I implement a fallback mechanism for the Simple Parser to the LLM Parser?
+Response: Implement a try-except block to handle Simple Parser failures and fall back to the LLM Parser.
+
+Prompt: Should `duckie_parser_steps.py` be in the `duckie_parser` folder?
+Response: If it contains Behave step definitions, keep it in the `steps` directory. Otherwise, move it to the `duckie_parser` folder.

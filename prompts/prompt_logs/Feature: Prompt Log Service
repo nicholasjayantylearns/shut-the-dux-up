@@ -1,0 +1,26 @@
+Feature: Prompt Log Service
+  As a Declarative Designer
+  I want to log prompts and their responses in a centralized system
+  So that I can reference them in the codebase and maintain traceability.
+
+  Scenario: Log a new prompt
+    Given I have a new prompt and its response
+    When I log the prompt with a unique ID
+    Then the prompt should be saved in the `prompts/` directory
+    And the log should include the prompt, response, and code references
+
+  Scenario: Reference a prompt in the codebase
+    Given a prompt has been logged with a unique ID
+    When I implement code based on the prompt
+    Then I should reference the prompt ID as a comment in the code
+
+  Scenario: Retrieve a prompt log
+    Given a prompt has been logged with a unique ID
+    When I retrieve the log for the prompt
+    Then I should see the prompt, response, and code references
+
+  Scenario: Automate prompt logging
+    Given I have a new prompt and its response
+    When I use the prompt logging script
+    Then the script should generate a unique ID
+    And save the prompt log in the `prompts/` directory
