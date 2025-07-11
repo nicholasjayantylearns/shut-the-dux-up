@@ -1,10 +1,6 @@
 {
     "folders": [
         {
-            "name": "🔄 DUX Research Ecosystem (Root)",
-            "path": "."
-        },
-        {
             "name": "🧠 DUX Object Model Core",
             "path": "./dux-object-model-core"
         },
