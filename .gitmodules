@@ -4,6 +4,6 @@
 [submodule "dux-research-platform"]
 	path = dux-research-platform
 	url = https://github.com/nicholasjayantylearns/dux-research-platform.git
-# [submodule "dux-white-label-ui"]
-# 	path = dux-white-label-ui
-# 	url = https://github.com/nicholasjayantylearns/v0-project-status-vercel.git
+[submodule "dux-white-label-ui"]
+	path = dux-white-label-ui
+ 	url = https://github.com/nicholasjayantylearns/v0-project-status-vercel.git
