@@ -1,45 +1,59 @@
-import { streamText } from "ai"
-import { createOpenAI } from "@ai-sdk/openai"
 import type { NextRequest } from "next/server"
 
-// This route provides a direct, streaming connection to a local Ollama instance.
-// It's intended for standalone UI development when the full FastAPI backend is not needed.
+// This route connects to the FastAPI backend for RAG-enabled chat functionality.
+// UI -> FastAPI (8504) -> LLM (11434) + Neo4j GraphRAG
 
 export const runtime = "edge"
 
-// Ensure the local Ollama URL is configured.
-const ollamaBaseUrl = process.env.LOCAL_LLM_API_BASE_URL || "http://localhost:11434"
-
-// Configure the AI SDK to use the local Ollama endpoint.
-// The key can be anything as Ollama doesn't require one by default.
-const ollama = createOpenAI({
-  baseURL: ollamaBaseUrl,
-  apiKey: "",
-})
+// FastAPI backend URL running on port 8504
+const backendUrl = process.env.BACKEND_URL || "http://localhost:8504"
 
 export async function POST(req: NextRequest) {
-  if (!ollamaBaseUrl) {
-    return new Response("Error: LOCAL_LLM_API_BASE_URL is not set. This route cannot function.", { status: 500 })
-  }
-
   try {
     const { messages, data } = await req.json()
 
     // Extract the custom data sent from the client
     const userRequest = data?.userRequest || ""
     const systemPrompt = data?.systemPrompt || "You are a helpful AI assistant."
+    const useRAG = false // Disable RAG for now until indexes are populated
 
-    // Combine the system prompt and the latest user message for context.
-    const fullPrompt = `${systemPrompt}\n\nUser Request: ${userRequest}`
+    // Prepare messages for the backend
+    const backendMessages = [
+      { role: "system", content: systemPrompt },
+      ...messages,
+    ]
 
-    const result = await streamText({
-      model: ollama('llama3.2'), 
-      prompt: fullPrompt,
+    // If there's a specific user request, add it as the latest message
+    if (userRequest) {
+      backendMessages.push({ role: "user", content: userRequest })
+    }
+
+    // Forward the request to the FastAPI backend chat-stream endpoint
+    const response = await fetch(`${backendUrl}/chat-stream`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        messages: backendMessages,
+        rag: useRAG,
+      }),
     })
 
-    return result.toDataStreamResponse()
+    if (!response.ok) {
+      throw new Error(`Backend returned ${response.status}: ${response.statusText}`)
+    }
+
+    // Stream the response back to the client
+    return new Response(response.body, {
+      headers: {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
+      },
+    })
   } catch (error) {
-    console.error("Error in direct-to-Ollama route:", error)
+    console.error("Error in chat route:", error)
     const errorMessage = error instanceof Error ? error.message : "An unknown error occurred"
     return new Response(`Error: ${errorMessage}`, { status: 500 })
   }
