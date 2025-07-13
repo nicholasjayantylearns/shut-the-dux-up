@@ -9,7 +9,14 @@
 .env
 .env.local
 
+# Python virtual environments and cache
+venv/
+.venv/
+__pycache__/
+*.pyc
+
 # Ignore local backup and temporary directories/files
 dux-white-label-ui-broken/
 dux-research-platform-VERIFIED/
-README copy.mddux-white-label-ui/
+README copy.md
+dux-white-label-ui/*.sb-*
