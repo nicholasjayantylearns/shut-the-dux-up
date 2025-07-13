@@ -1,0 +1,7 @@
+# pack-refs with: peeled fully-peeled sorted 
+c14b3658cc3d98e110c7904053223190420fe1fa refs/heads/demo/platform-api-payloads-noon
+674c3ef75b5edc046599f84d2105f8368a28361a refs/heads/feature/hitl-docling-breakthrough
+c0b97bf3419184581605506d3eabb2a1551c88ab refs/heads/handoff-folder-only
+c1cbfd55e546ac94132024559ce00ce87c051f5a refs/heads/handoff-research-platform
+34c53ff105a7acbf5aa7c7057d22dbf47882191d refs/heads/main
+6f1d1add4f053d80f6b0e81b80d2fbef70775816 refs/heads/research_object_validation

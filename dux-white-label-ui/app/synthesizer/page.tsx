@@ -21,7 +21,7 @@ export default function SynthesizerPage() {
     <div className="relative min-h-screen bg-black flex items-center justify-center p-4 font-mono text-green-400">
       <CrtBackground />
       <div className="w-full max-w-6xl h-[90vh] z-10">
-        <TerminalWindow title="DUX INSIGHT SYNTHESIZER :: vOS 1.0" status="ONLINE" statusColor="bg-green-500">
+        <TerminalWindow title="INSIGHT SYNTHESIZER :: vOS 1.0" status="ONLINE" statusColor="bg-green-500">
           <UnifiedSynthesizer
             insight={insight}
             initialProblem={initialProblem}
