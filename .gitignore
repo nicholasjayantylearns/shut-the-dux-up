@@ -19,4 +19,4 @@ __pycache__/
 dux-white-label-ui-broken/
 dux-research-platform-VERIFIED/
 README copy.md
-dux-white-label-ui/
+dux-white-label-ui/*.sb-*
