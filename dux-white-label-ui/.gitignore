@@ -16,8 +16,15 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
+# env files - CRITICAL FOR PII
 .env*
+!.env.example
+
+# Local data files that might contain PII
+*.csv
+*.json
+*.xml
+*.log
 
 # vercel
 .vercel
@@ -25,3 +32,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore nested repositories
+dux-research-platform/
+dux-object-model-core/

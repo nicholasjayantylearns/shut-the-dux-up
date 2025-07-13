@@ -70,7 +70,7 @@ export function EvidenceLoader() {
         const formData = new FormData()
         formData.append('file', file)
         formData.append('evidence_type', 'document')
-        
+
         const response = await fetch('http://localhost:8504/api/evidence/upload', {
           method: 'POST',
           body: formData
@@ -78,20 +78,20 @@ export function EvidenceLoader() {
 
         if (response.ok) {
           const result = await response.json()
-          
-          setEvidenceList(prev => 
-            prev.map(e => 
-              e.id === evidence.id 
-                ? { 
-                    ...e, 
-                    status: "processed", 
-                    content: `Processed ${result.num_chunks} chunks from ${file.name}`,
-                    metadata: {
-                      ...e.metadata,
-                      tags: result.tags || [],
-                      document_id: result.document_id
-                    }
+
+          setEvidenceList(prev =>
+            prev.map(e =>
+              e.id === evidence.id
+                ? {
+                  ...e,
+                  status: "processed",
+                  content: `Processed ${result.num_chunks} chunks from ${file.name}`,
+                  metadata: {
+                    ...e.metadata,
+                    tags: result.tags || [],
+                    document_id: result.document_id
                   }
+                }
                 : e
             )
           )
@@ -100,9 +100,9 @@ export function EvidenceLoader() {
         }
       } catch (error) {
         console.error('Upload error:', error)
-        setEvidenceList(prev => 
-          prev.map(e => 
-            e.id === evidence.id 
+        setEvidenceList(prev =>
+          prev.map(e =>
+            e.id === evidence.id
               ? { ...e, status: "error", content: `Error: ${error.message}` }
               : e
           )
@@ -134,14 +134,14 @@ export function EvidenceLoader() {
       // Create a text file from manual input
       const blob = new Blob([manualEvidence.content], { type: 'text/plain' })
       const file = new File([blob], `${manualEvidence.source}.txt`, { type: 'text/plain' })
-      
+
       const formData = new FormData()
       formData.append('file', file)
       formData.append('evidence_type', manualEvidence.type)
       if (manualEvidence.participant) {
         formData.append('participant', manualEvidence.participant)
       }
-      
+
       const response = await fetch('http://localhost:8504/api/evidence/upload', {
         method: 'POST',
         body: formData
@@ -149,19 +149,19 @@ export function EvidenceLoader() {
 
       if (response.ok) {
         const result = await response.json()
-        
-        setEvidenceList(prev => 
-          prev.map(e => 
-            e.id === evidence.id 
-              ? { 
-                  ...e, 
-                  status: "processed",
-                  metadata: {
-                    ...e.metadata,
-                    tags: result.tags || [],
-                    document_id: result.document_id
-                  }
+
+        setEvidenceList(prev =>
+          prev.map(e =>
+            e.id === evidence.id
+              ? {
+                ...e,
+                status: "processed",
+                metadata: {
+                  ...e.metadata,
+                  tags: result.tags || [],
+                  document_id: result.document_id
                 }
+              }
               : e
           )
         )
@@ -170,9 +170,9 @@ export function EvidenceLoader() {
       }
     } catch (error) {
       console.error('Manual submission error:', error)
-      setEvidenceList(prev => 
-        prev.map(e => 
-          e.id === evidence.id 
+      setEvidenceList(prev =>
+        prev.map(e =>
+          e.id === evidence.id
             ? { ...e, status: "error" }
             : e
         )
@@ -199,33 +199,30 @@ export function EvidenceLoader() {
       <div className="flex gap-4 mb-6 border-b border-green-900">
         <button
           onClick={() => setActiveTab("upload")}
-          className={`px-4 py-2 font-mono transition-all ${
-            activeTab === "upload" 
-              ? "text-green-400 border-b-2 border-green-400" 
+          className={`px-4 py-2 font-mono transition-all ${activeTab === "upload"
+              ? "text-green-400 border-b-2 border-green-400"
               : "text-green-600 hover:text-green-400"
-          }`}
+            }`}
         >
           <Upload className="inline-block w-4 h-4 mr-2" />
           Upload Files
         </button>
         <button
           onClick={() => setActiveTab("manual")}
-          className={`px-4 py-2 font-mono transition-all ${
-            activeTab === "manual" 
-              ? "text-green-400 border-b-2 border-green-400" 
+          className={`px-4 py-2 font-mono transition-all ${activeTab === "manual"
+              ? "text-green-400 border-b-2 border-green-400"
               : "text-green-600 hover:text-green-400"
-          }`}
+            }`}
         >
           <FileText className="inline-block w-4 h-4 mr-2" />
           Manual Entry
         </button>
         <button
           onClick={() => setActiveTab("status")}
-          className={`px-4 py-2 font-mono transition-all ${
-            activeTab === "status" 
-              ? "text-green-400 border-b-2 border-green-400" 
+          className={`px-4 py-2 font-mono transition-all ${activeTab === "status"
+              ? "text-green-400 border-b-2 border-green-400"
               : "text-green-600 hover:text-green-400"
-          }`}
+            }`}
         >
           <Database className="inline-block w-4 h-4 mr-2" />
           Status ({processedCount}/{totalCount})
@@ -287,7 +284,7 @@ export function EvidenceLoader() {
                   <select
                     id="type"
                     value={manualEvidence.type}
-                    onChange={(e) => setManualEvidence({...manualEvidence, type: e.target.value as any})}
+                    onChange={(e) => setManualEvidence({ ...manualEvidence, type: e.target.value as any })}
                     className="w-full bg-black border border-green-900 text-green-400 rounded px-3 py-2"
                   >
                     <option value="interview">Interview</option>
@@ -302,7 +299,7 @@ export function EvidenceLoader() {
                   <Input
                     id="source"
                     value={manualEvidence.source}
-                    onChange={(e) => setManualEvidence({...manualEvidence, source: e.target.value})}
+                    onChange={(e) => setManualEvidence({ ...manualEvidence, source: e.target.value })}
                     placeholder="e.g., Interview #3, User Session Recording"
                     className="bg-black border-green-900 text-green-400"
                   />
@@ -313,7 +310,7 @@ export function EvidenceLoader() {
                   <Input
                     id="participant"
                     value={manualEvidence.participant}
-                    onChange={(e) => setManualEvidence({...manualEvidence, participant: e.target.value})}
+                    onChange={(e) => setManualEvidence({ ...manualEvidence, participant: e.target.value })}
                     placeholder="e.g., User 7, Admin Team"
                     className="bg-black border-green-900 text-green-400"
                   />
@@ -324,7 +321,7 @@ export function EvidenceLoader() {
                   <Textarea
                     id="content"
                     value={manualEvidence.content}
-                    onChange={(e) => setManualEvidence({...manualEvidence, content: e.target.value})}
+                    onChange={(e) => setManualEvidence({ ...manualEvidence, content: e.target.value })}
                     placeholder="Enter the evidence text, quotes, or observations..."
                     rows={6}
                     className="bg-black border-green-900 text-green-400"
@@ -336,7 +333,7 @@ export function EvidenceLoader() {
                   <Input
                     id="tags"
                     value={manualEvidence.tags}
-                    onChange={(e) => setManualEvidence({...manualEvidence, tags: e.target.value})}
+                    onChange={(e) => setManualEvidence({ ...manualEvidence, tags: e.target.value })}
                     placeholder="e.g., budget, forecasting, pain-point"
                     className="bg-black border-green-900 text-green-400"
                   />
