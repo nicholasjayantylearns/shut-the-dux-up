@@ -177,3 +177,47 @@ cython_debug/
 dux-design-system-showcase/.DS_Store.DS_Store
 **/.DS_Store
 .DS_Store
+
+# DUX-specific ignores
+# Logs and debug files
+**/logs/
+**/*.log
+**/debug.log
+**/http.log
+**/neo4j.log
+**/query.log
+**/security.log
+
+# Handoff folders (may contain sensitive data)
+handoff/
+**/handoff/
+HANDOFF_*.md
+**/HANDOFF_*.md
+
+# Pipeline results and object samples (may contain research data)
+pipeline_results/
+object_samples/
+**/pipeline_results/
+**/object_samples/
+llm_extraction_results/
+**/llm_extraction_results/
+
+# Test data that may contain PII
+test_data/
+**/test_data/
+*_errors.txt
+**/*_errors.txt
+
+# Neo4j database files
+data/databases/
+data/dbms/
+data/server_id
+data/transactions/
+**/data/databases/
+**/data/dbms/
+**/data/server_id
+**/data/transactions/
+
+# Node modules (should be ignored but being explicit)
+node_modules/
+**/node_modules/

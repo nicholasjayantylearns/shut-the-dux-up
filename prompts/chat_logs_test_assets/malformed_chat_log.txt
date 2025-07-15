@@ -1,7 +1,0 @@
-Prompt: This is a valid prompt.
-Response: This is a valid response.
-
-Invalid Entry Without Prompt or Response
-
-Prompt: Another valid prompt.
-Response: Another valid response.
